@@ -39,8 +39,7 @@ from Elizabeth.modules.helper_funcs.alternate import typing_action
 
 
 PM_START_TEXT = f"""
-`Hi..Welcome` [🦋](https://telegra.ph/file/8726fa898eead0617f774.jpg)
-`I'm`  єlízαвєth
+`I'm`  ANGEL
 `I'm here to help you manage your groups.. Click Help button to find out more about how to use me to my full potential..`
 """
 
@@ -49,13 +48,13 @@ buttons = [[InlineKeyboardButton(text=" HELP AND COMMANDS ❓",
 ]]
 
 buttons += [[InlineKeyboardButton(text="♻️ ADD ME TO YOUR GROUP ♻️",
-                                  url="t.me/Elizabeth_TgBot?startgroup=true"),
+                                  url="t.me/AM_angel_bot?startgroup=true"),
 ]]
 
 buttons += [[InlineKeyboardButton(text="SOURCE CODE 💫",
-                                  url="https://github.com/Mr-SHRLCK/Elizabeth-2.0"),
+                                  url="https://github.com"),
              InlineKeyboardButton(text="SUPPORT🌳",
-                                  url="https://t.me/joinchat/oxSPzt02LkgxOTY9"),
+                                  url="https://t.me/am_dq_fan"),
 ]]
 
 buttons += [[InlineKeyboardButton(text="🎀 CLOSE THE MENU 🎀",
@@ -63,7 +62,7 @@ buttons += [[InlineKeyboardButton(text="🎀 CLOSE THE MENU 🎀",
 
 
 HELP_STRINGS = f"""
-`Hi.. I'm` єlízαвєth[🦋](https://telegra.ph/file/54ed9e0d6eef2cc730f12.jpg)
+`Hi.. I'm` єlízαвєth[🦋](https://telegra.ph/file/80600be4098a9a04b31e4.jpg)
 `Click on the buttons below to get documentation about specific modules..`"""
 
 
@@ -79,6 +78,13 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 GDPR = []
+
+START_IMG = os.environ.get('START_IMG', None)
+if START_IMG is None:
+    img = "https://telegra.ph/file/80600be4098a9a04b31e4.jpg"
+else:
+  img = START_IMG    
+
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module(
