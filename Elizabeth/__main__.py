@@ -199,7 +199,7 @@ def send_start(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name
     text = PM_START_TEXT
-    Img = START_IMG
+    img = START_IMG
     buttons = [[InlineKeyboardButton(text="Help and Commands ❓",
                                   callback_data="help_back"),
     ]]
@@ -209,8 +209,8 @@ def send_start(update, context):
                                   callback_data="close_menu")]]
 
 
-    update.effective_message.reply_text(
-        PM_START_TEXT,
+    update.effective_message.reply_photo(
+        PM_START_TEXT,START_IMG, 
         reply_markup=InlineKeyboardMarkup(buttons),
         parse_mode=ParseMode.MARKDOWN,
         timeout=60,
