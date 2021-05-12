@@ -198,8 +198,7 @@ def send_start(update, context):
 
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name
-    text = PM_START_TEXT
-    img = START_IMG
+    text = img, PM_START_TEXT
     buttons = [[InlineKeyboardButton(text="Help and Commands ❓",
                                   callback_data="help_back"),
     ]]
