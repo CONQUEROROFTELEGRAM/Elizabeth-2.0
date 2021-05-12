@@ -208,7 +208,9 @@ def send_start(update, context):
                                   callback_data="close_menu")]]
 
 
-        update.effective_message.reply_photo(img,PM_START_TEXT, reply_markup=InlineKeyboardMarkup(buttons),
+    update.effective_message.send_photo(
+        img,PM_START_TEXT, 
+        reply_markup=InlineKeyboardMarkup(buttons),
         parse_mode=ParseMode.MARKDOWN,
         timeout=60,
         disable_web_page_preview=False,
